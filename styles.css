@@ -1,0 +1,532 @@
+* {
+    box-sizing: border-box;
+    font-family: Libre Baskerville;
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 16px;
+}
+
+a {
+  font-family: Libre Baskerville;
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  gap: 16px;
+
+}
+
+.header {
+  background-color: hsla(34.29, 32%, 78%, 1); /* same beige */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;          /* left/right spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18); /* soft drop shadow */
+  position: sticky;            /* stays on top when scrolling */
+  top: 0;
+  z-index: 100;
+}
+
+/* Right-side nav list layout */
+.right-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;          /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* base (desktop) – hide hamburger */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* the two bars inside the button */
+.menu-toggle .bar {
+  display: block;
+  width: 30px;
+  height: 1.5px;
+  background-color: #000;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+
+/* -------------------------
+   MOBILE MENU BEHAVIOR
+   ------------------------- */
+@media (max-width: 768px) {
+  .header {
+    padding: 18px 20px;
+  }
+
+  /* show hamburger and give it a box */
+  .menu-toggle {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 210;
+  }
+
+  .right-links {
+    position: fixed;
+    inset: 0;
+    background-color: hsla(34.29, 32%, 78%, 1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-size: 28px;
+
+    opacity: 0;                 /* start hidden */
+    pointer-events: none;       /* not clickable when hidden */
+    transform: translateY(10px);/* start slightly lower */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 200;
+  }
+
+    /* each menu item starts slightly down & invisible */
+  .right-links li {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* when menu opens, fade/slide each one in */
+  .header.open .right-links li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* small stagger so they don't all pop in at once */
+  .header.open .right-links li:nth-child(1) { transition-delay: 0.05s; }
+  .header.open .right-links li:nth-child(2) { transition-delay: 0.10s; }
+  .header.open .right-links li:nth-child(3) { transition-delay: 0.15s; }
+  .header.open .right-links li:nth-child(4) { transition-delay: 0.20s; }
+  .header.open .right-links li:nth-child(5) { transition-delay: 0.25s; }
+}
+
+  .header.open .right-links {
+    opacity: 1;                 /* fade in */
+    pointer-events: auto;       /* clickable now */
+    transform: translateY(0);   /* slide up a bit */
+  }
+
+  /* HAMBURGER -> X animation */
+
+  /* top bar */
+  .menu-toggle .bar:first-child {
+    transform-origin: center;
+  }
+
+  /* bottom bar */
+  .menu-toggle .bar:last-child {
+    transform-origin: center;
+  }
+
+  /* when menu is open, rotate into an X */
+  .header.open .menu-toggle .bar:first-child {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+
+  .header.open .menu-toggle .bar:last-child {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
+
+
+
+  /* move name to top-left on mobile */
+  .left-links {
+    margin: 0;
+    padding: 0;
+
+  }
+  .left-links li {
+    list-style: none;
+  }
+
+  /* when menu is open, change hamburger to X */
+  .header.open .menu-toggle span:first-child {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+  .header.open .menu-toggle span:last-child {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+
+
+/* reset li margins just in case */
+.right-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.left-links {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 1;
+}
+
+.nav-link.active {
+  
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  .nav-list {
+    margin-top: 8px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-title {
+    font-size: 20px;
+  }
+}
+
+body {
+    background-color: hsla(34.29, 32%, 78%, 1);
+}
+
+/* ==============================
+SECTION BACKGROUND (FULL WIDTH) 
+=============================== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 88vh;
+  background-image: url("file:///Users/parkerjones/Documents/Photography/Best%20photos/IMG_5473.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin: hsla(34.29, 32%, 78%, 1);
+  background-color: hsla(34.29, 32%, 78%, 1);
+}
+
+.hero-wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(54, 47, 47, 0.5); /* Change opacity as needed */
+  backdrop-filter: blur(.3px);
+}
+
+/* TEXT INSIDE HERO */
+.hero-content {
+  position: relative; /* So it sits above overlay */
+  text-align: center;
+  color: rgb(242, 231, 215);
+  z-index: 2;
+  font-family: Libre Baskerville;
+}
+
+.hero-content h1 {
+  font-size: 4rem;   /* change to whatever you want */
+  font-family: "Libre Baskerville", serif; /* or yours */
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+
+.hero-content p {
+  font-size: 2.6rem;
+  margin-top: 10px;
+  font-weight: 50;
+  color: hsla(34.29, 32%, 78%, 1);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding: 20px;
+  }
+
+  .hero-content p {
+    font-size: 2rem;
+  }
+}
+
+
+/* =========================
+   PHOTOGRAPHY SECTION
+   ========================= */
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* angled top */
+.section.pointed {
+  clip-path: polygon(50% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);
+}
+
+/* replace with your image path */
+#photography {
+  background-image: url("file:///Users/parkerjones/Documents/Photography/Best photos/IMG_6104.jpg");
+}
+
+.overlay2 {
+  position: absolute;
+  inset: 0;
+  background: rgba(96, 93, 93, 0.2); /* Change opacity as needed */
+  backdrop-filter: blur(.3px);
+}
+
+/* text styling */
+.section-content {
+  text-align: center;
+}
+
+.section-content h2 {
+  font-family: Libre Baskerville;
+  font-size: 3.1rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  color: white;
+}
+
+/* button styling */
+.section-btn {
+  background-color: hsla(31.36, 20.95%, 58.82%, 1);
+  border: none;
+  padding: 18px 130px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  color: rgb(235, 229, 220);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.section-btn:hover {
+  opacity: 0.75;
+}
+
+/* =========================
+   BOOK A SHOOT SECTION
+   ========================= */
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 68vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#photoshoots {
+  background-image: url("file:///Users/parkerjones/Documents/Photography/Best photos/IMG_0710.jpg");
+  background-size: center;
+  background-position: center 65%;
+}
+
+.overlay3 {
+  position: absolute;
+  inset: 0;
+  background: rgba(96, 93, 93, 0.2); /* Change opacity as needed */
+  backdrop-filter: blur(.3px);
+}
+
+/* text styling */
+.section-content2 {
+  text-align: center;
+}
+
+.section-content2 h2 {
+  font-family: Libre Baskerville;
+  font-size: 3.1rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  color: white;
+}
+
+/* button styling */
+.section-btn2 {
+  background-color: hsla(31.36, 20.95%, 58.82%, 1);
+  border: none;
+  padding: 18px 130px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  color: rgb(235, 229, 220);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.section-btn2:hover {
+  opacity: 0.75;
+}
+
+/* --------------------
+   FOOTER
+   -------------------- */
+
+.site-footer {
+  background-color: hsla(34.29, 32%, 78%, 1); /* your beige */
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 24px;
+  color: #000;
+}
+
+/* Left side (your name) */
+.footer-left {
+  font-weight: 400;
+}
+
+/* Right side (Instagram icon) */
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.instagram-icon {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover fade effect */
+.instagram-icon:hover {
+  opacity: 0.55;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+/* BASE STYLE (desktop / default) */
+.section-content h2 {
+  font-family: "Libre Baskerville";
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 15px;
+  margin-top: 75px;
+  color: white;
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* shrink the tall image sections */
+  #photography,
+  #photoshoots {
+    height: 40vh !important;          /* smaller overall height */
+    /* if you had min-height before, this will override it */
+    background-position: center 40%;  /* optional: adjust framing */
+  }
+
+  /* shrink the heading + tighten spacing */
+  #photography .section-content h2 {
+    font-size: 2.1rem;
+    margin-top: 25px;
+    margin-bottom: 8px;
+  }
+
+  #photoshoots .section-content2 h2 {
+    font-size: 2.1rem;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+
+
+  /* smaller buttons */
+  #photography .section-btn,
+  #photoshoots .section-btn2 {
+    padding: 8px 94px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Make the hero section shorter and crop the image nicer */
+  .hero {
+    min-height: 40vh;             /* was probably ~80–90vh */
+    padding: 20px;                /* less padding inside */
+    background-position: center 40%;  /* lift the image a little */
+  }
+
+  /* Make the name + subtitle more compact */
+  .hero-content h1 {
+    font-size: 3rem;            /* smaller than desktop */
+    margin-bottom: 8px;
+  }
+
+  .hero-content p {
+    font-size: 1.6rem;
+  }
+
+  /* Optional: reduce the space below the hero before “Get in touch” */
+  .hero-wrapper {
+    margin-bottom: 5px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+
