@@ -248,7 +248,7 @@ SECTION BACKGROUND (FULL WIDTH)
   position: relative;
   width: 100%;
   min-height: 88vh;
-  background-image: url("file:///Users/parkerjones/Documents/Photography/Best%20photos/IMG_5473.jpg");
+  background-image: url("images/landscapes/italy/IMG_5473.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -338,7 +338,7 @@ SECTION BACKGROUND (FULL WIDTH)
 
 /* replace with your image path */
 #photography {
-  background-image: url("file:///Users/parkerjones/Documents/Photography/Best photos/IMG_6104.jpg");
+  background-image: url("images/landscapes/italy/IMG_6104.jpg");
 }
 
 .overlay2 {
@@ -398,7 +398,7 @@ SECTION BACKGROUND (FULL WIDTH)
 }
 
 #photoshoots {
-  background-image: url("file:///Users/parkerjones/Documents/Photography/Best photos/IMG_0710.jpg");
+  background-image: url("images/automotive/IMG_0708.jpg");
   background-size: center;
   background-position: center 65%;
 }
