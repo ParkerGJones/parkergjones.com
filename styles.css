@@ -312,6 +312,10 @@ SECTION BACKGROUND (FULL WIDTH)
   .hero-content p {
     font-size: 2rem;
   }
+
+  .hero-wrapper {
+    padding-right: 30px;
+  }
 }
 
 
@@ -449,7 +453,7 @@ SECTION BACKGROUND (FULL WIDTH)
 
 .site-footer {
   background-color: hsla(34.29, 32%, 78%, 1);
-  padding: 20px 80px;
+  padding: 20px 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -728,7 +732,7 @@ SECTION BACKGROUND (FULL WIDTH)
   /* shrink the tall image sections */
   #photography,
   #photoshoots {
-    height: 40vh !important;
+    height: 34vh !important;
     /* smaller overall height */
     /* if you had min-height before, this will override it */
     background-position: center 40%;
@@ -761,7 +765,7 @@ SECTION BACKGROUND (FULL WIDTH)
 
   /* Make the hero section shorter and crop the image nicer */
   .hero {
-    min-height: 40vh;
+    min-height: 35vh;
     /* was probably ~80–90vh */
     padding: 20px;
     /* less padding inside */
@@ -784,7 +788,7 @@ SECTION BACKGROUND (FULL WIDTH)
   .hero-wrapper {
     margin-bottom: 5px;
     margin-left: -20px;
-    margin-right: -20px;
+  
   }
 }
 
@@ -1069,7 +1073,7 @@ SECTION BACKGROUND (FULL WIDTH)
 
 .lightbox-content {
   position: relative;
-  max-height: 84.5vh;
+  max-height: 30vh;
   height: 100%;
   width: auto;
   display: flex;
