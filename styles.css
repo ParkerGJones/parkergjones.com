@@ -453,13 +453,13 @@ SECTION BACKGROUND (FULL WIDTH)
 
 .site-footer {
   background-color: hsla(34.29, 32%, 78%, 1);
-  padding: 20px 45px;
+  padding: 20px 34px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: 24px;
+  font-size: 20px;
   color: #000;
 }
 
@@ -475,8 +475,8 @@ SECTION BACKGROUND (FULL WIDTH)
 }
 
 .instagram-icon {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   transition: opacity 0.25s ease;
 }
