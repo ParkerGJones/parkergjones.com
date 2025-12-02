@@ -1,15 +1,15 @@
 * {
-    box-sizing: border-box;
-    font-family: Libre Baskerville;
-    margin: 0px;
+  box-sizing: border-box;
+  font-family: Libre Baskerville;
+  margin: 0px;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    gap: 16px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  gap: 16px;
 }
 
 a {
@@ -22,13 +22,17 @@ a {
 }
 
 .header {
-  background-color: hsla(34.29, 32%, 78%, 1); /* same beige */
+  background-color: hsla(34.29, 32%, 78%, 1);
+  /* same beige */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 50px;          /* left/right spacing */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18); /* soft drop shadow */
-  position: sticky;            /* stays on top when scrolling */
+  padding: 30px 50px;
+  /* left/right spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  /* soft drop shadow */
+  position: sticky;
+  /* stays on top when scrolling */
   top: 0;
   z-index: 100;
 }
@@ -37,7 +41,8 @@ a {
 .right-links {
   list-style: none;
   display: flex;
-  gap: 32px;          /* spacing between links */
+  gap: 32px;
+  /* spacing between links */
   margin: 0;
   padding: 0;
 }
@@ -96,14 +101,17 @@ a {
     gap: 24px;
     font-size: 28px;
 
-    opacity: 0;                 /* start hidden */
-    pointer-events: none;       /* not clickable when hidden */
-    transform: translateY(10px);/* start slightly lower */
+    opacity: 0;
+    /* start hidden */
+    pointer-events: none;
+    /* not clickable when hidden */
+    transform: translateY(10px);
+    /* start slightly lower */
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 200;
   }
 
-    /* each menu item starts slightly down & invisible */
+  /* each menu item starts slightly down & invisible */
   .right-links li {
     opacity: 0;
     transform: translateY(10px);
@@ -117,59 +125,78 @@ a {
   }
 
   /* small stagger so they don't all pop in at once */
-  .header.open .right-links li:nth-child(1) { transition-delay: 0.05s; }
-  .header.open .right-links li:nth-child(2) { transition-delay: 0.10s; }
-  .header.open .right-links li:nth-child(3) { transition-delay: 0.15s; }
-  .header.open .right-links li:nth-child(4) { transition-delay: 0.20s; }
-  .header.open .right-links li:nth-child(5) { transition-delay: 0.25s; }
+  .header.open .right-links li:nth-child(1) {
+    transition-delay: 0.05s;
+  }
+
+  .header.open .right-links li:nth-child(2) {
+    transition-delay: 0.10s;
+  }
+
+  .header.open .right-links li:nth-child(3) {
+    transition-delay: 0.15s;
+  }
+
+  .header.open .right-links li:nth-child(4) {
+    transition-delay: 0.20s;
+  }
+
+  .header.open .right-links li:nth-child(5) {
+    transition-delay: 0.25s;
+  }
 }
 
-  .header.open .right-links {
-    opacity: 1;                 /* fade in */
-    pointer-events: auto;       /* clickable now */
-    transform: translateY(0);   /* slide up a bit */
-  }
+.header.open .right-links {
+  opacity: 1;
+  /* fade in */
+  pointer-events: auto;
+  /* clickable now */
+  transform: translateY(0);
+  /* slide up a bit */
+}
 
-  /* HAMBURGER -> X animation */
+/* HAMBURGER -> X animation */
 
-  /* top bar */
-  .menu-toggle .bar:first-child {
-    transform-origin: center;
-  }
+/* top bar */
+.menu-toggle .bar:first-child {
+  transform-origin: center;
+}
 
-  /* bottom bar */
-  .menu-toggle .bar:last-child {
-    transform-origin: center;
-  }
+/* bottom bar */
+.menu-toggle .bar:last-child {
+  transform-origin: center;
+}
 
-  /* when menu is open, rotate into an X */
-  .header.open .menu-toggle .bar:first-child {
-    transform: rotate(45deg) translate(3px, 3px);
-  }
+/* when menu is open, rotate into an X */
+.header.open .menu-toggle .bar:first-child {
+  transform: rotate(45deg) translate(3px, 3px);
+}
 
-  .header.open .menu-toggle .bar:last-child {
-    transform: rotate(-45deg) translate(3px, -3px);
-  }
+.header.open .menu-toggle .bar:last-child {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
 
 
 
-  /* move name to top-left on mobile */
-  .left-links {
-    margin: 0;
-    padding: 0;
+/* move name to top-left on mobile */
+.left-links {
+  margin: 0;
+  padding: 0;
 
-  }
-  .left-links li {
-    list-style: none;
-  }
+}
 
-  /* when menu is open, change hamburger to X */
-  .header.open .menu-toggle span:first-child {
-    transform: rotate(45deg) translate(4px, 4px);
-  }
-  .header.open .menu-toggle span:last-child {
-    transform: rotate(-45deg) translate(4px, -4px);
-  }
+.left-links li {
+  list-style: none;
+}
+
+/* when menu is open, change hamburger to X */
+.header.open .menu-toggle span:first-child {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.header.open .menu-toggle span:last-child {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
 
 
 
@@ -180,13 +207,13 @@ a {
 }
 
 .left-links {
-    color: #000000;
-    font-size: 20px;
-    font-weight: 1;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 1;
 }
 
 .nav-link.active {
-  
+
   border-bottom: 1px solid #000;
   padding-bottom: 3px;
 }
@@ -211,7 +238,7 @@ a {
 }
 
 body {
-    background-color: hsla(34.29, 32%, 78%, 1);
+  background-color: hsla(34.29, 32%, 78%, 1);
 }
 
 /* ==============================
@@ -243,13 +270,15 @@ SECTION BACKGROUND (FULL WIDTH)
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(54, 47, 47, 0.5); /* Change opacity as needed */
+  background: rgba(54, 47, 47, 0.5);
+  /* Change opacity as needed */
   backdrop-filter: blur(.3px);
 }
 
 /* TEXT INSIDE HERO */
 .hero-content {
-  position: relative; /* So it sits above overlay */
+  position: relative;
+  /* So it sits above overlay */
   text-align: center;
   color: rgb(242, 231, 215);
   z-index: 2;
@@ -257,8 +286,10 @@ SECTION BACKGROUND (FULL WIDTH)
 }
 
 .hero-content h1 {
-  font-size: 4rem;   /* change to whatever you want */
-  font-family: "Libre Baskerville", serif; /* or yours */
+  font-size: 4rem;
+  /* change to whatever you want */
+  font-family: "Libre Baskerville", serif;
+  /* or yours */
   font-weight: 400;
   letter-spacing: 0.5px;
 }
@@ -313,7 +344,8 @@ SECTION BACKGROUND (FULL WIDTH)
 .overlay2 {
   position: absolute;
   inset: 0;
-  background: rgba(96, 93, 93, 0.2); /* Change opacity as needed */
+  background: rgba(96, 93, 93, 0.2);
+  /* Change opacity as needed */
   backdrop-filter: blur(.3px);
 }
 
@@ -374,7 +406,8 @@ SECTION BACKGROUND (FULL WIDTH)
 .overlay3 {
   position: absolute;
   inset: 0;
-  background: rgba(96, 93, 93, 0.2); /* Change opacity as needed */
+  background: rgba(96, 93, 93, 0.2);
+  /* Change opacity as needed */
   backdrop-filter: blur(.3px);
 }
 
@@ -415,7 +448,7 @@ SECTION BACKGROUND (FULL WIDTH)
    -------------------- */
 
 .site-footer {
-  background-color: hsla(34.29, 32%, 78%, 1); /* your beige */
+  background-color: hsla(34.29, 32%, 78%, 1);
   padding: 20px 80px;
   display: flex;
   justify-content: space-between;
@@ -461,11 +494,231 @@ SECTION BACKGROUND (FULL WIDTH)
 .section-content h2 {
   font-family: "Libre Baskerville";
   font-size: clamp(2.2rem, 4vw, 3.1rem);
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
   margin-bottom: 15px;
   margin-top: 75px;
   color: white;
+}
+
+
+/* ----------------------
+   ABOUT PAGE LAYOUT
+   ---------------------- */
+
+.about-page {
+  background-color: hsla(34.29, 32%, 78%, 1);
+  /* same beige */
+  padding: 80px 8vw 100px;
+  min-height: calc(100vh - 160px);
+  /* keeps content from feeling too short */
+  box-sizing: border-box;
+}
+
+/* main two-column layout */
+.about-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
+  column-gap: 40px;
+  align-items: start;
+}
+
+/* text side */
+.about-text h1 {
+  font-family: "Libre Baskerville", serif;
+  color: hsla(30, 12.5%, 18.82%, 1);
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-style: italic;
+  /* matches your current style */
+}
+
+/* photo side */
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  /* set to 12px if you want slightly rounded corners */
+  object-fit: cover;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+/* ----------------------
+   CONTACT PAGE
+   ---------------------- */
+
+.contact-page {
+  background-color: hsla(34.29, 32%, 78%, 1);
+  /* same beige as rest */
+  padding: 80px 8vw 100px;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  max-width: 1900px;
+  /* matches the tighter look */
+  margin: 0 auto;
+}
+
+/* Title + intro text */
+
+.contact-text h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.8rem;
+  color: hsla(30, 12.5%, 18.82%, 1);
+  margin-bottom: 24px;
+  font-weight: 200;
+  margin-top: -20px;
+}
+
+.contact-text p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.16rem;
+  color: hsla(30, 12.5%, 18.82%, 1);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.contact-details a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+
+.contact-form {
+  margin-top: 32px;
+}
+
+.field-block {
+  margin-bottom: 18px;
+}
+
+.field-block label {
+  display: block;
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.required {
+  font-size: 0.8rem;
+}
+
+/* First & last name row */
+
+.field-row {
+  display: flex;
+  gap: 14px;
+}
+
+.field-row input {
+  flex: 1;
+}
+
+/* Inputs + textarea */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e0d0bd;
+  background-color: #f7efe6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+/* Send button */
+
+.contact-btn {
+  margin-top: 14px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 12px;
+  background-color: #3a2a1f;
+  /* dark brown */
+  color: #fff;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.25s ease, transform 0.1s ease;
+}
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+.contact-btn:active {
+  transform: translateY(1px);
+}
+
+/* Mobile tweaks */
+
+@media (max-width: 900px) {
+  .contact-page {
+    padding: 60px 6vw 80px;
+  }
+
+  .field-row {
+    flex-direction: column;
+    /* stack First/Last only on small screens */
+  }
+}
+
+
+
+/* ------------- 
+   Responsive 
+   ------------- */
+
+@media (max-width: 700px) {
+  .about-page {
+    padding: 30px 6vw 80px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    /* stack text + image */
+    row-gap: 40px;
+  }
+
+  .about-photo {
+    order: -1;
+    /* put the image on top on mobile; delete this line if you want text first */
+  }
+
+  .about-photo img {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    height: 628px;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
 }
 
 
@@ -475,9 +728,11 @@ SECTION BACKGROUND (FULL WIDTH)
   /* shrink the tall image sections */
   #photography,
   #photoshoots {
-    height: 40vh !important;          /* smaller overall height */
+    height: 40vh !important;
+    /* smaller overall height */
     /* if you had min-height before, this will override it */
-    background-position: center 40%;  /* optional: adjust framing */
+    background-position: center 40%;
+    /* optional: adjust framing */
   }
 
   /* shrink the heading + tighten spacing */
@@ -506,14 +761,18 @@ SECTION BACKGROUND (FULL WIDTH)
 
   /* Make the hero section shorter and crop the image nicer */
   .hero {
-    min-height: 40vh;             /* was probably ~80–90vh */
-    padding: 20px;                /* less padding inside */
-    background-position: center 40%;  /* lift the image a little */
+    min-height: 40vh;
+    /* was probably ~80–90vh */
+    padding: 20px;
+    /* less padding inside */
+    background-position: center 40%;
+    /* lift the image a little */
   }
 
   /* Make the name + subtitle more compact */
   .hero-content h1 {
-    font-size: 3rem;            /* smaller than desktop */
+    font-size: 3rem;
+    /* smaller than desktop */
     margin-bottom: 8px;
   }
 
@@ -527,6 +786,419 @@ SECTION BACKGROUND (FULL WIDTH)
     margin-left: -20px;
     margin-right: -20px;
   }
+}
+
+
+/*===================
+ Photo gallery (main page)
+====================*/
+
+.photography-page {
+  padding: 40px 7vw 0px;
+}
+
+/* main mixed gallery grid */
+.photo-grid {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr)); /* 6 slots */
+  gap: 32px; /* whatever spacing you like */
+  grid-auto-flow: dense; /* <-- key: backfills gaps intelligently */
+}
+
+/* Default tile: vertical (2x3 look) */
+.photo-item {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+
+/* Landscape tile: twice as wide, same height */
+.photo-item.photo-wide {
+  grid-column: span 2;      /* uses 2 of the 6 slots */
+  aspect-ratio: 3 / 2;      /* a bit wider */
+}
+
+
+
+
+
+
+/* responsive columns */
+@media (max-width: 1100px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Grid container */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  /* 6 columns on big screens */
+  gap: 24px;
+}
+
+.photo-section {
+  padding-bottom: 15px;
+}
+
+/* Each image box */
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  /* optional: soft corners */
+}
+
+/* Make images fill their cell and keep nice crop */
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Landscape images = 2 columns wide */
+.photo-item.photo-wide {
+  grid-column: span 2;
+}
+
+/* Control overall height: same height for all tiles */
+.photo-item {
+  aspect-ratio: 2 / 3;
+  /* tall-ish tiles – tweak if you want */
+}
+
+.photo-item.photo-wide {
+  aspect-ratio: 4 / 2.83;
+  /* twice as wide, same-ish height feel */
+}
+
+/* Medium screens (tablets) – 3 columns */
+@media (max-width: 1024px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .photo-item.photo-wide {
+    grid-column: span 3;
+    /* full row on tablet */
+  }
+}
+
+/* Small screens (phones) – 2 columns */
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-item.photo-wide {
+    grid-column: span 2;
+    /* full row on phone */
+  }
+}
+
+
+
+.gallery-section {
+  text-align: center;
+  background-color: hsla(30.73, 22.65%, 64.51%, 1);
+  width: 100vw;
+  /* full viewport width */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #b7a38c;
+  /* your tan color */
+  padding: 80px 0 90px;
+  padding-top: 45px;
+}
+
+.photographygallery-section {
+  text-align: center;
+  width: 100vw;
+  /* full viewport width */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  /* your tan color */
+  padding: 80px 0 90px;
+  padding-top: 45px;
+}
+
+.gallery-section .section-heading {
+  font-family: "Libre Baskerville", serif;
+  font-size: 3.2rem;
+  color: hsla(30, 12.5%, 18.82%, 1);
+  margin-bottom: 30px;
+  font-weight: 50;
+  font-style: italic;
+}
+
+.gallery-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+
+}
+
+.gallery-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* dark overlay + text */
+.gallery-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(83, 75, 75, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f1e6;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 2.4rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.gallery-tile:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.7);
+}
+
+.gallery-tile:hover .gallery-tile-overlay {
+  opacity: 1;
+}
+
+/* stack vertical on small screens */
+@media (max-width: 900px) {
+  .gallery-tiles {
+    grid-template-columns: 1fr;
+    padding: 0px 40px;
+  }
+}
+
+/* ---------- LIGHTBOX ---------- */
+
+/* Overlay background */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  /* or block if you're toggling some other way */
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+  /* center vertically */
+  z-index: 1000;
+}
+
+
+/* When you open it, you probably add a class like .is-open */
+.lightbox.is-open {
+  display: flex;
+}
+
+/* Lightbox image */
+.lightbox img {
+  max-width: 90vw;
+  /* never wider than 90% of the viewport width */
+  max-height: 90vh;
+  /* never taller than 90% of the viewport height */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  padding: 0;
+  display: none;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-content {
+  position: relative;
+  max-height: 84.5vh;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 2.4rem;
+  color: #f5f1e6;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+
+/* ----------------------------------
+   SUB Photo galleries PAGE(S) LAYOUT
+   ----------------------------------*/
+
+.automotivegallery-section {
+  text-align: center;
+  width: 100vw;
+  /* full viewport width */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  /* your tan color */
+  padding: 80px 0 90px;
+  padding-top: 45px;
+}
+
+.automotivegallery-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+
+}
+
+.automotivegallery-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.automotivegallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+
+/* dark overlay + text */
+.automotivegallery-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(83, 75, 75, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f1e6;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.automotivegallery-tile:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.7);
+}
+
+.automotivegallery-tile:hover .automotivegallery-tile-overlay {
+  opacity: 1;
+}
+
+/* stack vertical on small screens */
+@media (max-width: 900px) {
+  .automotivegallery-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0px 40px;
+  }
+}
+
+/* ----------------------
+   The Line under gallery
+   ---------------------*/
+
+.automotivesection-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 3.2rem;
+  color: hsla(30, 12.5%, 18.82%, 1);
+  margin-bottom: 30px;
+  font-weight: 50;
+  font-style: italic;
+}
+
+/* Line under the title */
+.automotivesection-title::after {
+  content: "";
+  display: block;
+  width: 90%;
+  /* adjust length of line */
+  max-width: 1300px;
+  /* prevents huge line on large screens */
+  height: 2px;
+  /* line thickness */
+  background-color: #51433b;
+  /* darker version of your tan theme */
+  margin: 15px auto 0;
+  /* space above line + center */
 }
 
 
