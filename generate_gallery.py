@@ -55,7 +55,7 @@ def build_page(gallery_html: str) -> str:
         <!-- right: normal nav links -->
         <ul class="right-links">
             <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="photography.html" class="nav-link active">Photography</a></li>
+            <li><a href="photography.html" class="nav-link">Photography</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
