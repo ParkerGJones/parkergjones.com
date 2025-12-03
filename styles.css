@@ -517,6 +517,8 @@ SECTION BACKGROUND (FULL WIDTH)
   min-height: calc(100vh - 160px);
   /* keeps content from feeling too short */
   box-sizing: border-box;
+  padding-bottom: 60px
+
 }
 
 /* main two-column layout */
@@ -695,7 +697,7 @@ SECTION BACKGROUND (FULL WIDTH)
 
 @media (max-width: 700px) {
   .about-page {
-    padding: 30px 6vw 80px;
+    padding: 30px 6vw 45px;
   }
 
   .about-container {
