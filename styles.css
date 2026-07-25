@@ -348,7 +348,7 @@ SECTION BACKGROUND (FULL WIDTH)
 .overlay2 {
   position: absolute;
   inset: 0;
-  background: rgba(96, 93, 93, 0.2);
+  background: rgba(96, 93, 93, 0.3);
   /* Change opacity as needed */
   backdrop-filter: blur(.3px);
 }
@@ -401,6 +401,12 @@ SECTION BACKGROUND (FULL WIDTH)
   color: white;
 }
 
+#realestate {
+  background-image: url("images/Real estate/DL1/DSC06202-HDR.jpg");
+  background-size: center;
+  background-position: center 65%;
+}
+
 #photoshoots {
   background-image: url("images/automotive/IMG_0708.jpg");
   background-size: center;
@@ -410,7 +416,15 @@ SECTION BACKGROUND (FULL WIDTH)
 .overlay3 {
   position: absolute;
   inset: 0;
-  background: rgba(96, 93, 93, 0.2);
+  background: rgba(143, 135, 135, 0.2);
+  /* Change opacity as needed */
+  backdrop-filter: blur(.3px);
+}
+
+.overlay4 {
+  position: absolute;
+  inset: 0;
+  background: rgba(143, 135, 135, 0.2);
   /* Change opacity as needed */
   backdrop-filter: blur(.3px);
 }
@@ -733,7 +747,8 @@ SECTION BACKGROUND (FULL WIDTH)
 
   /* shrink the tall image sections */
   #photography,
-  #photoshoots {
+  #photoshoots,
+  #realestate {
     height: 34vh !important;
     /* smaller overall height */
     /* if you had min-height before, this will override it */
@@ -754,10 +769,18 @@ SECTION BACKGROUND (FULL WIDTH)
     margin-bottom: 8px;
   }
 
+   #realestate .section-content2 h2 {
+    font-size: 2.1rem;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0)
+  }
+
 
   /* smaller buttons */
   #photography .section-btn,
-  #photoshoots .section-btn2 {
+  #photoshoots .section-btn2,
+  #realestate .section-btn2 {
     padding: 8px 94px;
     font-size: 0.95rem;
   }

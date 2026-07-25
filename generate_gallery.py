@@ -7,11 +7,11 @@ import re
 
 # ---------- CONFIG YOU CHANGE PER GALLERY ----------
 
-SLUG = "americansignmuseum"          # folder name under images/ AND html filename (no .html)
-PAGE_TITLE = "American Sign Museum – Parker Jones"
+SLUG = "property1"          # folder name under images/ AND html filename (no .html)
+PAGE_TITLE = "Property 1 – Parker Jones"
 
-GALLERY_FOLDER = Path(f"images/landscapes/americansignmuseum")
-OUTPUT_HTML = Path(f"americansignmuseum.html")
+GALLERY_FOLDER = Path(f"images/Real estate/DL1")
+OUTPUT_HTML = Path(f"property1.html")
 
 
 # ---------- HELPERS ----------
