@@ -7,11 +7,11 @@ import re
 
 # ---------- CONFIG YOU CHANGE PER GALLERY ----------
 
-SLUG = "BWNM2"          # folder name under images/ AND html filename (no .html)
-PAGE_TITLE = "BMW M2 – Parker Jones"
+SLUG = "mercedes-benzofSD"          # folder name under images/ AND html filename (no .html)
+PAGE_TITLE = "Mercedes-Benz of SD – Parker Jones"
 
-GALLERY_FOLDER = Path(f"images/automotive/BMWM2")
-OUTPUT_HTML = Path(f"BMWM2.html")
+GALLERY_FOLDER = Path(f"images/automotive/mercedes-benzofSD")
+OUTPUT_HTML = Path(f"mercedes-benzofSD.html")
 
 
 # ---------- HELPERS ----------
